@@ -19,7 +19,7 @@ router.get('/gen', async (req, resp, next)=>{
     try{
     let res = await axios.get(`https://api.yelp.com/v3/events?&sort_on=popularity&start_date<=${+ new Date}e&limit=10`,{
         headers:{
-        Authorization: `Bearer ${YelpKey}`
+        Authorization: `Bearer _BONcCSprVYtcvnpOGySFVR017XHLeaVtmJOWmDPw9mIXMY7Tio6Rs5eDSLcP-hOGBjnfvCli8S76dcBcO-hJ05wZ9-JD7iiAznSIlMZBAqWNNVW58STi0rKszJFX3Yx`
         }
     })
     let resarr= res.data.events
@@ -36,7 +36,7 @@ router.post('/category', async (req, resp, next)=>{
 
     const res = await axios.get(`https://api.yelp.com/v3/events?categories=${categoryId}&start_date<=${+ new Date}&sort_on=time_start&limit=10`,{
         headers:{
-        Authorization: `Bearer ${YelpKey}`
+        Authorization: `Bearer _BONcCSprVYtcvnpOGySFVR017XHLeaVtmJOWmDPw9mIXMY7Tio6Rs5eDSLcP-hOGBjnfvCli8S76dcBcO-hJ05wZ9-JD7iiAznSIlMZBAqWNNVW58STi0rKszJFX3Yx`
         }
     })
     const resarr= res.data.events
@@ -50,7 +50,7 @@ router.post('/event', async (req, resp, next)=>{
 
     const res = await axios.get(`https://api.yelp.com/v3/events/${eventId}`,{
         headers:{
-        Authorization: `Bearer ${YelpKey}`
+        Authorization: `Bearer _BONcCSprVYtcvnpOGySFVR017XHLeaVtmJOWmDPw9mIXMY7Tio6Rs5eDSLcP-hOGBjnfvCli8S76dcBcO-hJ05wZ9-JD7iiAznSIlMZBAqWNNVW58STi0rKszJFX3Yx`
     
         }
     })
@@ -66,7 +66,7 @@ router.post('/result', async (req, resp, next)=>{
 
     const res = await axios.get(`https://api.yelp.com/v3/events?categories=${term}&location=${location}&start_date<=${+ new Date}&sort_on=time_start&radius=40000&limit=25`,{
     headers:{
-    Authorization: `Bearer ${YelpKey}`
+    Authorization: `Bearer _BONcCSprVYtcvnpOGySFVR017XHLeaVtmJOWmDPw9mIXMY7Tio6Rs5eDSLcP-hOGBjnfvCli8S76dcBcO-hJ05wZ9-JD7iiAznSIlMZBAqWNNVW58STi0rKszJFX3Yx`
     }
     })
 
@@ -84,7 +84,7 @@ router.post('/suggest', async (req, resp, next)=>{
 
     const res = await axios.get(`https://api.yelp.com/v3/businesses/search?latitude=${lat}&longitude=${lon}&radius=40000&attributes=hot_and_new&limit=15`,{
     headers:{
-    Authorization: `Bearer ${YelpKey}`
+    Authorization: `Bearer _BONcCSprVYtcvnpOGySFVR017XHLeaVtmJOWmDPw9mIXMY7Tio6Rs5eDSLcP-hOGBjnfvCli8S76dcBcO-hJ05wZ9-JD7iiAznSIlMZBAqWNNVW58STi0rKszJFX3Yx`
     }
     })
  
@@ -99,7 +99,7 @@ router.post('/feature', async (req, resp, next)=>{
 
     const res = await axios.get(`https://api.yelp.com/v3/events/featured?location=${location}`,{
     headers:{
-    Authorization: `Bearer ${YelpKey}`
+    Authorization: `Bearer _BONcCSprVYtcvnpOGySFVR017XHLeaVtmJOWmDPw9mIXMY7Tio6Rs5eDSLcP-hOGBjnfvCli8S76dcBcO-hJ05wZ9-JD7iiAznSIlMZBAqWNNVW58STi0rKszJFX3Yx`
     }
     })
  
